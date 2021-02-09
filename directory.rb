@@ -18,6 +18,21 @@ students = [
  puts "-------------"
 end
 
+def input_students
+  puts "please enter the name of the students\n to finish just hit return twice"
+  #create an empty array
+  students = []
+  name = gets.chomp
+
+  while !name.empty? do
+  students << {name: name, cohort: :november}
+  puts "we now have #{students.count} students"
+  name = gets.chomp
+  end
+
+  students
+end
+
 def print_students(students)
   students.each { |student|
     puts "#{student[:name]} (#{student[:cohort]} cohort)"
@@ -29,6 +44,7 @@ def print_footer(students)
 puts "Overall, we have #{students.count} great students"
 end
 
+students = input_students
 print_header
 print_students(students)
 print_footer(students)
