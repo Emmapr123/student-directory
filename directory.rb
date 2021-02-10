@@ -37,7 +37,7 @@ def print_students(students)
   students.each { |student|
     puts "#{student[:name]} (#{student[:cohort]} cohort)"
   }
- end
+end
 
 # print the number of students
 def print_footer(students)
